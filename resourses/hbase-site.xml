@@ -1,0 +1,22 @@
+<configuration>
+    <property>  
+        <name>hbase.rootdir</name>  
+        <value>file:///E:/hbase-1.2.0-bin/hbase-1.2.0/root</value>  
+    </property>  
+    <property>  
+        <name>hbase.tmp.dir</name>  
+        <value>E:/hbase-1.2.0-bin/hbase-1.2.0/tem</value>  
+    </property>  
+    <property>  
+        <name>hbase.zookeeper.quorum</name>  
+        <value>127.0.0.1</value>  
+    </property>  
+    <property>  
+        <name>hbase.zookeeper.property.dataDir</name>  
+        <value>E:/hbase-1.2.0-bin/hbase-1.2.0/zoo</value>  
+    </property>  
+    <property>  
+        <name>hbase.cluster.distributed</name>  
+        <value>false</value>  
+     </property>  
+</configuration>

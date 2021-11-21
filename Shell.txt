@@ -1,0 +1,70 @@
+创建合适的表
+create 'StuClass', 'Student', 'Math', 'Computer', 'English'
+
+put 'StuClass', '2015001', 'Student:S_No', '2015001' 
+put 'StuClass', '2015001', 'Student:S_Name', 'Li Lei' 
+put 'StuClass', '2015001', 'Student:S_Sex', 'male' 
+put 'StuClass', '2015001', 'Student:S_Age', '23' 
+put 'StuClass', '2015002', 'Student:S_No', '2015002' 
+put 'StuClass', '2015002', 'Student:S_Name', 'Han Meimei' 
+put 'StuClass', '2015002', 'Student:S_Sex', 'female' 
+put 'StuClass', '2015002', 'Student:S_Age', '22' 
+put 'StuClass', '2015003', 'Student:S_No', '2015003' 
+put 'StuClass', '2015003', 'Student:S_Name', 'Zhang San' 
+put 'StuClass', '2015003', 'Student:S_Sex', 'male' 
+put 'StuClass', '2015003', 'Student:S_Age', '24'
+
+put 'StuClass', '2015001', 'Math:C_No', '123001' 
+put 'StuClass', '2015001', 'Math:C_Name', 'Math' 
+put 'StuClass', '2015001', 'Math:C_Credit', '2' 
+put 'StuClass', '2015001', 'English:C_No', '123003' 
+put 'StuClass', '2015001', 'English:C_Name', 'English' 
+put 'StuClass', '2015001', 'English:C_Credit', '3' 
+put 'StuClass', '2015002', 'Computer:C_No', '123002' 
+put 'StuClass', '2015002', 'Computer:C_Name', 'Computer Science' 
+put 'StuClass', '2015002', 'Computer:C_Credit', '5' 
+put 'StuClass', '2015002', 'English:C_No', '123003' 
+put 'StuClass', '2015002', 'English:C_Name', 'English' 
+put 'StuClass', '2015002', 'English:C_Credit', '3' 
+put 'StuClass', '2015003', 'Math:C_No', '123001' 
+put 'StuClass', '2015003', 'Math:C_Name', 'Math' 
+put 'StuClass', '2015003', 'Math:C_Credit', '2' 
+put 'StuClass', '2015003', 'Computer:C_No', '123002' 
+put 'StuClass', '2015003', 'Computer:C_Name', 'Computer Science' 
+put 'StuClass', '2015003', 'Computer:C_Credit', '5'
+
+put 'StuClass', '2015001', 'Math:SC_Score', '86' 
+put 'StuClass', '2015001', 'English:SC_Score', '69' 
+put 'StuClass', '2015002', 'Computer:SC_Score', '77' 
+put 'StuClass', '2015002', 'English:SC_Score', '99' 
+put 'StuClass', '2015003', 'Math:SC_Score', '98' 
+put 'StuClass', '2015003', 'Computer:SC_Score', '95'
+
+
+查询选修Computer Science的学生的成绩
+scan 'StuClass', {COLUMN=>'Computer:SC_Score'}
+
+
+增加新的列族和新列Contact:Email,并添加数据
+alter 'StuClass', 'Contact' 
+put 'StuClass', '2015001', 'Contact:Email', 'lilie@qq.com' 
+put 'StuClass', '2015002', 'Contact:Email', 'hmm@qq.com' 
+put 'StuClass', '2015003', 'Contact:Email', 'zs@qq.com'
+
+删除学号为2015003的学生的选课记录
+delete 'StuClass', '2015003', 'Math:C_No' 
+delete 'StuClass', '2015003', 'Math:C_Name' 
+delete 'StuClass', '2015003', 'Math:C_Credit' 
+delete 'StuClass', '2015003', 'Math:SC_Score' 
+delete 'StuClass', '2015003', 'Computer:C_No' 
+delete 'StuClass', '2015003', 'Computer:C_Name' 
+delete 'StuClass', '2015003', 'Computer:C_Credit' 
+delete 'StuClass', '2015003', 'Computer:SC_Score' 
+delete 'StuClass', '2015003', 'English:C_No' 
+delete 'StuClass', '2015003', 'English:C_Name' 
+delete 'StuClass', '2015003', 'English:C_Credit' 
+delete 'StuClass', '2015003', 'English:SC_Score'
+
+删除所创建的表
+disable 'StuClass' 
+drop 'StuClass'
