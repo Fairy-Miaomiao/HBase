@@ -98,13 +98,13 @@ shell代码见shell.txt
 
 ![image-20211121203942453](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211121203942453.png)
 
-### Java程序
+### Java程序运行
 
 ![image-20211121194828340](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211121194828340.png)
 
 ![image-20211121194930164](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211121194930164.png)
 
-### shell
+### shell运行
 
 #### 创建表
 
@@ -181,6 +181,20 @@ hbase shell中的>就变成了 '，如下图所示，输入其他命令也没有
 
 
 ## 其他思考
+
+### 本实验的其他构建表格方式
+
+本实验中，我创建的表格如下
+
+![image-20211121202808515](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211121202808515.png)
+
+做完实验回顾一番，不免开始思考，有没有其他创建方式呢?
+
+ 显然是有的，如下图，rowKey为课程号，课程作为一个列族，每个学生又分别作为一个列族
+
+![image-20211123182510746](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211123182510746.png)
+
+
 
 ### 列式存储的优点在哪？
 
